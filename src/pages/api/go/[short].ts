@@ -23,6 +23,6 @@ export default handleError(async function handler(
       message: "redirect-not-found",
       req,
     });
-    res.status(404).end();
+    res.redirect("/404");
   }
 });
