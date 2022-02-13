@@ -1,6 +1,18 @@
 [
   {
-    "short": "x",
-    "full": "https://example.com"
+    "short": "b",
+    "full": "https://abortnikov.ru"
+  },
+  {
+    "short": "ln",
+    "full": "https://www.linkedin.com/in/anton-bortnikov-7727501a9"
+  },
+  {
+    "short": "gh",
+    "full": "https://github.com/ntnbrtnkv"
+  },
+  {
+    "short": "tg",
+    "full": "https://t.me/ntnbrtnkv"
   }
 ]
