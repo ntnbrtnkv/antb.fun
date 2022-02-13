@@ -1,6 +1,7 @@
 import { captureMessage, setUser, setTags, flush } from "@sentry/nextjs";
 import { NextApiRequest } from "next";
 import { getClientIp } from "request-ip";
+import { lookup } from "geoip-lite";
 
 export const send = async ({
   message,
@@ -17,8 +18,12 @@ export const send = async ({
   setUser({
     ip_address: "{{auto}}",
   });
+  const ip = getClientIp(req);
+  const geo = lookup(ip ?? "");
   setTags({
-    ip: getClientIp(req),
+    ip,
+    country: geo?.country,
+    city: geo?.city,
   });
   if (link) {
     setTags({
