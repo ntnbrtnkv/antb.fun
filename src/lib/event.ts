@@ -24,6 +24,7 @@ export const send = async ({
     ip,
     country: geo?.country,
     city: geo?.city,
+    refferer: req.headers.referer,
   });
   if (link) {
     setTags({
