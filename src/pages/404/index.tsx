@@ -10,7 +10,7 @@ export default function Error404() {
         src={Cat}
         layout="fill"
         objectFit="cover"
-        objectPosition="center"
+        objectPosition="center left"
         placeholder="blur"
       />
       <div className={styles.banner}>
