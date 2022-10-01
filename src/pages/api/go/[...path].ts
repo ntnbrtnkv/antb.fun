@@ -11,15 +11,18 @@ export default handleError(async function handler(
 
   const link = links.find((link) => link.short === short);
 
-  console.log(rest);
-
   if (link) {
+    const fullpath = `${link.full}/${rest.join("/")}`;
+
     await send({
       message: "redirect",
       req,
-      link,
+      link: {
+        ...link,
+        full: fullpath,
+      },
     });
-    res.redirect(`${link.full}/${rest.join("/")}`);
+    res.redirect(fullpath);
   } else {
     await send({
       message: "redirect-not-found",
