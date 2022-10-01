@@ -7,9 +7,11 @@ export default handleError(async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { short } = req.query;
+  const [short, ...rest] = req.query.path as string[];
 
   const link = links.find((link) => link.short === short);
+
+  console.log(rest);
 
   if (link) {
     await send({
@@ -17,7 +19,7 @@ export default handleError(async function handler(
       req,
       link,
     });
-    res.redirect(link.full);
+    res.redirect(`${link.full}/${rest.join("/")}`);
   } else {
     await send({
       message: "redirect-not-found",
