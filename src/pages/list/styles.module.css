@@ -1,0 +1,51 @@
+.container {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary);
+  /* Created with https://www.css-gradient.com */
+  background: var(--primary);
+  background: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--secondary)
+  );
+  color: var(--text-primary);
+}
+
+.header {
+  font-size: min(30vw, 4em);
+  text-align: center;
+}
+
+.items {
+  padding: 8px 16px;
+}
+
+.item {
+  list-style-type: none;
+  font-size: min(5vw, 2em);
+  padding: 8px 0;
+}
+
+.item td:nth-child(2n + 1) {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.link {
+  color: var(--text-primary);
+}
+
+.button {
+  border: 1px;
+  border-radius: 4px;
+  margin-right: 4px;
+  background-color: #d9e2ec;
+  cursor: pointer;
+  align-self: center;
+}

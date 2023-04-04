@@ -5,3 +5,19 @@ body,
   height: 100vh;
   margin: 0;
 }
+
+:root {
+  --primary: #003e6b;
+  --secondary: #9e179f;
+  --text-primary: #f0f4f8;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

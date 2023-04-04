@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #193888;
+  background-color: var(--primary);
 }
 
 .banner {
@@ -16,19 +16,19 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  color: antiquewhite;
+  color: var(--text-primary);
 }
 
 .header {
-  font-size: min(54vw, 20em);
+  font-size: min(42vw, 18em);
   margin: 0;
   padding-left: min(3rem, 5vw);
-  text-shadow: #193888 0 0 2rem;
+  text-shadow: var(--primary) 0 0 2rem;
 }
 
 .text {
   font-size: min(7vw, 2em);
   margin: 0.2em;
   padding-left: min(3rem, 5vw);
-  text-shadow: #193888 0 0 2px;
+  text-shadow: var(--primary) 0 0 2px;
 }

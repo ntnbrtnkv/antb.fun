@@ -12,6 +12,7 @@ export default function Error404() {
         objectFit="cover"
         objectPosition="center left"
         placeholder="blur"
+        alt="sad cat"
       />
       <div className={styles.banner}>
         <h1 className={styles.header}>404</h1>
